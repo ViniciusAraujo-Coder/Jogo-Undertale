@@ -1,52 +1,121 @@
-# ❤️ Mini RPG Undertale
+<div align="center">
+
+#  MINI RPG UNDERTALE 
+
+### Um RPG de terminal inspirado em Undertale
+
+*"Apesar de tudo, ainda é você."*
+
+<img src="https://i.pinimg.com/1200x/8a/8b/37/8a8b3742bc98b2712d373b14fc307193.jpg" width="150">
+
+</div>
+
+---
+
+## 📖 Sobre o Projeto
+
+Este projeto foi desenvolvido para uma atividade acadêmica da faculdade com o objetivo de aplicar conceitos de programação utilizando Python.
+
+Inspirado em Undertale, o jogo apresenta batalhas por turnos, escolhas do jogador e interações com personagens clássicos do universo criado por Toby Fox.
+
+O jogador poderá escolher sua alma, selecionar uma arma e enfrentar inimigos icônicos enquanto toma decisões que influenciam sua jornada.
+
+---
+
+## 🎮 Gameplay
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-black?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/RPG-black?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Terminal_Game-black?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Projeto_Faculdade-black?style=for-the-badge"/>
+
+<!-- COLOQUE SEU GIF AQUI -->
+
+<img src="imagens/gameplay.gif" width="700">
+
 </p>
 
-> Um mini RPG de terminal inspirado em Undertale, desenvolvido em Python para um projeto acadêmico.
+---
+
+## 📸 Screenshots
+
+### Escolha da Alma
+
+<p align="center">
+<img src="imagens/alma.png" width="700">
+</p>
+
+### Sistema de Batalha
+
+<p align="center">
+<img src="imagens/batalha.png" width="700">
+</p>
+
+### Sistema de Itens
+
+<p align="center">
+<img src="imagens/item.png" width="700">
+</p>
+
+### Vitória
+
+<p align="center">
+<img src="imagens/vitoria.png" width="700">
+</p>
 
 ---
 
-## 🎮 Sobre o projeto
+## ❤️ Escolha sua Alma
 
-Este projeto é um mini RPG em Python inspirado em Undertale, com batalhas por turnos, escolhas narrativas e sistema de interação com inimigos.
+🔴 Determinação
 
-O jogador pode escolher sua alma, selecionar uma arma e enfrentar personagens inspirados no universo de Undertale, utilizando ações como atacar, interagir, usar item ou poupar o inimigo.
+🟡 Justiça
+
+🟢 Bondade
+
+🔵 Integridade
+
+🟣 Perseverança
 
 ---
 
-## ⚔️ Mecânicas do jogo
+## ⚔️ Mecânicas
 
-- ❤️ Escolha de alma com atributos diferentes
-- ⚔️ Escolha de arma com bônus e chance de crítico
-- 🧠 Sistema de combate por turnos
-- 🗨️ Interações com inimigos usando ACT
-- 🕊️ Sistema MERCY para poupar inimigos
-- 🍪 Uso de itens durante a batalha
+```txt
+╔════════════════════╗
+║ ⚔️ FIGHT           ║
+║ 🧠 ACT             ║
+║ 🎒 ITEM            ║
+║ 🕊️ MERCY           ║
+╚════════════════════╝
+```
+
+### Recursos do jogo
+
+- ❤️ Escolha de alma
+- ⚔️ Escolha de arma
+- 🎒 Sistema de inventário
+- 🧠 Sistema ACT
+- 🕊️ Sistema MERCY
+- 💀 Batalhas por turno
 - 🎵 Música de fundo
-- 🎨 ASCII art e cores no terminal
+- 🎨 Interface estilizada no terminal
+- 🌟 Progressão de inimigos
 
 ---
 
-## 🧠 Conceitos utilizados
+## 👥 Personagens
 
-- Programação Orientada a Objetos
-- Classes e objetos
-- Funções
-- Dicionários e listas
-- Estruturas condicionais
-- Laços de repetição
-- Manipulação de terminal
-- Biblioteca `random`
-- Biblioteca `pygame` para áudio
+🌻 Flowey
+
+🐐 Toriel
+
+💀 Papyrus
+
+💀 Sans
+
+👑 Asgore
 
 ---
 
-## 🛠️ Tecnologias
+## 🛠️ Tecnologias Utilizadas
 
 <p align="left">
   <img src="https://img.shields.io/badge/PYTHON-black?style=for-the-badge&logo=python&logoColor=white"/>
@@ -57,9 +126,74 @@ O jogador pode escolher sua alma, selecionar uma arma e enfrentar personagens in
 
 ---
 
-## ▶️ Como executar
+## 🧠 Conceitos Aplicados
+
+- Programação Orientada a Objetos
+- Estruturas de Repetição
+- Estruturas Condicionais
+- Manipulação de Arquivos
+- Bibliotecas Externas
+- Sistema de Combate
+- Organização de Código
+- Experiência do Usuário no Terminal
+
+---
+
+## ▶️ Como Executar
 
 Clone o repositório:
 
 ```bash
 git clone https://github.com/ViniciusAraujo-Coder/NOME-DO-REPOSITORIO.git
+```
+
+Entre na pasta:
+
+```bash
+cd NOME-DO-REPOSITORIO
+```
+
+Instale as dependências:
+
+```bash
+pip install pygame
+```
+
+Execute o jogo:
+
+```bash
+python jogo.py
+```
+
+---
+
+## 📁 Estrutura do Projeto
+
+```txt
+📦 Mini RPG Undertale
+┣ 📜 jogo.py
+┣ 🎵 tema.mp3
+┣ 📂 imagens
+┣ 📜 README.md
+┗ 📜 requirements.txt
+```
+
+---
+
+## 💙 Inspiração
+
+Este projeto foi inspirado em:
+
+<img src="https://upload.wikimedia.org/wikipedia/en/8/8c/Undertale_cover_art.jpg" width="250">
+
+**Undertale** é um RPG independente desenvolvido por Toby Fox e lançado em 2015, conhecido por sua narrativa marcante, personagens memoráveis e sistema único de escolhas.
+
+---
+
+<div align="center">
+
+### ❤️ "Apesar de tudo, ainda é você."
+
+— Undertale
+
+</div>
