@@ -44,19 +44,6 @@ O jogador poderá escolher sua alma, selecionar uma arma e enfrentar inimigos ic
 |:---:|:---:|
 | <img src="imagens/inventario.jpg" width="400"> | <img src="imagens/vitoria.jpg" width="400"> |
 
-## ❤️ Escolha sua Alma
-
-🔴 Determinação
-
-🟡 Justiça
-
-🟢 Bondade
-
-🔵 Integridade
-
-🟣 Perseverança
-
----
 
 ## ⚔️ Mecânicas
 
@@ -73,7 +60,6 @@ O jogador poderá escolher sua alma, selecionar uma arma e enfrentar inimigos ic
 
 - ❤️ Escolha de alma
 - ⚔️ Escolha de arma
-- 🎒 Sistema de inventário
 - 🧠 Sistema ACT
 - 🕊️ Sistema MERCY
 - 💀 Batalhas por turno
@@ -85,15 +71,7 @@ O jogador poderá escolher sua alma, selecionar uma arma e enfrentar inimigos ic
 
 ## 👥 Personagens
 
-🌻 Flowey
-
-🐐 Toriel
-
-💀 Papyrus
-
-💀 Sans
-
-👑 Asgore
+🌻 Flowey 🐐 Toriel 💀 Papyrus 💀 Sans 👑 Asgore
 
 ---
 
