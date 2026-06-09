@@ -1,4 +1,4 @@
-# Mini RPG em Python com POO - Inspirado em Undertale
+1# Mini RPG em Python com POO - Inspirado em Undertale
 # Vinícius Alves Machado de Araújo - RA: 824127157
 
 import random
