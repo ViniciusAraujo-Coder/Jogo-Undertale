@@ -49,10 +49,10 @@ O jogador poderá escolher sua alma, selecionar uma arma e enfrentar inimigos ic
 
 ```txt
 ╔════════════════════╗
-║ ⚔️ FIGHT           ║
-║ 🧠 ACT             ║
-║ 🎒 ITEM            ║
-║ 🕊️ MERCY           ║
+  ⚔️ FIGHT           
+  🧠 ACT             
+  🎒 ITEM            
+  🕊️ MERCY           
 ╚════════════════════╝
 ```
 
