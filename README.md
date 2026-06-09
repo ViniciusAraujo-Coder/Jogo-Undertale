@@ -36,31 +36,13 @@ O jogador poderá escolher sua alma, selecionar uma arma e enfrentar inimigos ic
 
 ## 📸 Screenshots
 
-### Escolha da Alma
+| Escolha da Alma | Sistema de Batalha |
+|:---:|:---:|
+| <img src="imagens/alma.jpg" width="400"> | <img src="imagens/batalha.jpg" width="400"> |
 
-<p align="center">
-<img src="imagens/alma.png" width="700">
-</p>
-
-### Sistema de Batalha
-
-<p align="center">
-<img src="imagens/batalha.png" width="700">
-</p>
-
-### Sistema de Itens
-
-<p align="center">
-<img src="imagens/item.png" width="700">
-</p>
-
-### Vitória
-
-<p align="center">
-<img src="imagens/vitoria.png" width="700">
-</p>
-
----
+| Sistema de Itens | Vitória |
+|:---:|:---:|
+| <img src="imagens/inventario.jpg" width="400"> | <img src="imagens/vitoria.jpg" width="400"> |
 
 ## ❤️ Escolha sua Alma
 
@@ -144,7 +126,7 @@ O jogador poderá escolher sua alma, selecionar uma arma e enfrentar inimigos ic
 Clone o repositório:
 
 ```bash
-git clone https://github.com/ViniciusAraujo-Coder/NOME-DO-REPOSITORIO.git
+git clone https://github.com/ViniciusAraujo-Coder/Jogo-Undertale.git
 ```
 
 Entre na pasta:
