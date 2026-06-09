@@ -178,22 +178,3 @@ python jogo.py
 ┗ 📜 requirements.txt
 ```
 
----
-
-## 💙 Inspiração
-
-Este projeto foi inspirado em:
-
-<img src="https://upload.wikimedia.org/wikipedia/en/8/8c/Undertale_cover_art.jpg" width="250">
-
-**Undertale** é um RPG independente desenvolvido por Toby Fox e lançado em 2015, conhecido por sua narrativa marcante, personagens memoráveis e sistema único de escolhas.
-
----
-
-<div align="center">
-
-### ❤️ "Apesar de tudo, ainda é você."
-
-— Undertale
-
-</div>
