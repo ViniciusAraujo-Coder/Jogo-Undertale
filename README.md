@@ -110,7 +110,7 @@ git clone https://github.com/ViniciusAraujo-Coder/Jogo-Undertale.git
 Entre na pasta:
 
 ```bash
-cd NOME-DO-REPOSITORIO
+cd Jogo-Undertale
 ```
 
 Instale as dependências:
