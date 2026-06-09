@@ -8,6 +8,7 @@
 
 <img src="https://i.pinimg.com/1200x/8a/8b/37/8a8b3742bc98b2712d373b14fc307193.jpg" width="150">
 
+*Artista: @kuruka_shi in x*
 </div>
 
 ---
