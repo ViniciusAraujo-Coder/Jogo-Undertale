@@ -1,5 +1,5 @@
-1# Mini RPG em Python com POO - Inspirado em Undertale
-# Vinícius Alves Machado de Araújo - RA: 824127157
+# Mini RPG em Python com POO - Inspirado em Undertale
+# Vinícius Alves Machado de Araújo 
 
 import random
 import time
@@ -7,18 +7,14 @@ import sys
 import os
 import threading
 
-# ─────────────────────────────────────────────
-#  MÚSICA DE FUNDO
-# ─────────────────────────────────────────────
 ARQUIVO_MUSICA = "tema.mp3"
 
 def iniciar_musica():
-    """Toca a música em loop usando pygame, se disponível."""
     try:
         import pygame
         pygame.mixer.init()
         pygame.mixer.music.load(ARQUIVO_MUSICA)
-        pygame.mixer.music.play(-1)  # -1 = loop infinito
+        pygame.mixer.music.play(-1)
     except FileNotFoundError:
         pass  
     except Exception:
@@ -31,16 +27,12 @@ def parar_musica():
     except Exception:
         pass
 
-
-# ─────────────────────────────────────────────
-#  CORES ANSI
-# ─────────────────────────────────────────────
 class C:
     RESET    = "\033[0m"
     BOLD     = "\033[1m"
     DIM      = "\033[2m"
     BRANCO   = "\033[97m"
-    CINZA    = "\033[97m" #teste 90 cinz
+    CINZA    = "\033[97m" 
     AMARELO  = "\033[93m"
     CIANO    = "\033[96m"
     VERDE    = "\033[92m"
@@ -60,10 +52,6 @@ def ativar_cores_windows():
 
 ativar_cores_windows()
 
-
-# ─────────────────────────────────────────────
-#  UTILITÁRIOS VISUAIS
-# ─────────────────────────────────────────────
 LARGURA = 60
 
 def limpar():
@@ -73,11 +61,9 @@ def linha(char="═", cor=C.CINZA):
     print(cor + (char * LARGURA) + C.RESET)
 
 def separador(cor=C.CINZA):
-    """Linha simples sem laterais, para menus."""
     print(cor + ("─" * LARGURA) + C.RESET)
 
 def digitar(texto, delay=0.028, cor="", som=False):
-    """Efeito typewriter sem centralização."""
     print(cor, end="", flush=True)
     for ch in texto:
         print(ch, end="", flush=True)
@@ -105,10 +91,6 @@ def menu_opcoes(opcoes):
     separador()
     print()
 
-
-# ─────────────────────────────────────────────
-#  ALMAS
-# ─────────────────────────────────────────────
 ALMAS = {
     "1": {"nome": "Determinação", "emoji": "* ",  "cor": C.VERMELHO,  "vida": 100, "forca": 12, "defesa": 2},
     "2": {"nome": "Integridade",  "emoji": "* ",  "cor": C.AZUL,      "vida":  90, "forca": 11, "defesa": 4},
@@ -133,10 +115,6 @@ def exibir_almas():
     separador(C.AMARELO)
     print()
 
-
-# ─────────────────────────────────────────────
-#  ARMAS
-# ─────────────────────────────────────────────
 ARMAS = {
     "1": {"nome": "Varinha de Manteiga", "emoji": "~", "bonus": 5,  "crit": 0.40, "desc": "+5 dano  40% critico"},
     "2": {"nome": "Faca de Chef",        "emoji": "/", "bonus": 8,  "crit": 0.20, "desc": "+8 dano  20% critico"},
@@ -157,10 +135,6 @@ def exibir_armas():
     separador(C.CIANO)
     print()
 
-
-# ─────────────────────────────────────────────
-#  CLASSE ARMA
-# ─────────────────────────────────────────────
 class Arma:
     def __init__(self, dados):
         self.nome        = dados["nome"]
@@ -176,9 +150,6 @@ class Arma:
         return dano, critico
 
 
-# ─────────────────────────────────────────────
-#  CLASSE PERSONAGEM
-# ─────────────────────────────────────────────
 class Personagem:
     def __init__(self, nome, alma, arma):
         self.nome     = nome
@@ -243,9 +214,6 @@ class Personagem:
         return self.vida > 0
 
 
-# ─────────────────────────────────────────────
-#  CLASSE INIMIGO
-# ─────────────────────────────────────────────
 class Inimigo:
     def __init__(self, cfg):
         self.nome             = cfg["nome"]
@@ -299,9 +267,6 @@ class Inimigo:
         return self.vida > 0
 
 
-# ─────────────────────────────────────────────
-#  ASCII ART DOS INIMIGOS
-# ─────────────────────────────────────────────
 def ascii_flowey():
     print(r"""
             ⣠⠖⠺⣍⣉⣓⣲⣚⣉⣉⡗⠲⣄
@@ -395,9 +360,6 @@ def mostrar_ascii(nome):
         fn()
 
 
-# ─────────────────────────────────────────────
-#  HABILIDADES ESPECIAIS DOS INIMIGOS
-# ─────────────────────────────────────────────
 def habilidade_flowey(alvo):
     hits = random.randint(3, 5)
     dano_total = 0
@@ -432,9 +394,6 @@ def habilidade_asgore(alvo):
     alvo.receber_dano(dano)
 
 
-# ─────────────────────────────────────────────
-#  CONFIGURAÇÃO DOS INIMIGOS
-# ─────────────────────────────────────────────
 INIMIGOS_CFG = [
     {
         "nome": "Flowey", "vida": 70, "forca": 6, "bonus_dano": 3, "chance_crit": 0.05, "defesa": 0,
@@ -538,10 +497,6 @@ INIMIGOS_CFG = [
     },
 ]
 
-
-# ─────────────────────────────────────────────
-#  LOOP DE COMBATE
-# ─────────────────────────────────────────────
 def combate(jogador, inimigo):
     linha()
     digitar(f"  * {C.BOLD}{inimigo.nome}{C.RESET} apareceu!", cor=C.BRANCO)
@@ -551,7 +506,6 @@ def combate(jogador, inimigo):
         linha()
         mostrar_ascii(inimigo.nome)
 
-        # Status
         print(f"  {jogador.cor}{jogador.nome}{C.RESET}  HP: {barra_hp(jogador.vida, jogador.vida_max)}  {C.AMARELO}LV {jogador.nivel}{C.RESET}  {C.CINZA}XP: {jogador.xp}/{jogador.xp_prox}{C.RESET}")
         print(f"  {C.BRANCO}{inimigo.nome}{C.RESET}   HP: {barra_hp(inimigo.vida, inimigo.vida_max)}")
         print(f"  {C.CINZA}Itens: {jogador.itens}  Arma: {jogador.arma.nome}{C.RESET}")
@@ -617,7 +571,6 @@ def combate(jogador, inimigo):
             digitar("  * Opcao invalida!", cor=C.CINZA)
             continue
 
-        # Turno do inimigo
         if inimigo.esta_vivo():
             print()
             separador(C.CINZA)
@@ -636,9 +589,6 @@ def combate(jogador, inimigo):
     return "derrotado"
 
 
-# ─────────────────────────────────────────────
-#  INTRODUÇÃO NARRATIVA DE CADA INIMIGO
-# ─────────────────────────────────────────────
 def mostrar_intro_inimigo(cfg):
     limpar()
     linha()
@@ -652,9 +602,6 @@ def mostrar_intro_inimigo(cfg):
     pausa()
 
 
-# ─────────────────────────────────────────────
-#  TELA TÍTULO
-# ─────────────────────────────────────────────
 LOGO = r"""
  _   _ _   _ ____  _____ ____  _____  _    _     _____
 | | | | \ | |  _ \| ____|  _ \|_   _|/ \  | |   | ____|
@@ -752,16 +699,12 @@ def tela_creditos():
     pausa()
 
 
-# ─────────────────────────────────────────────
-#  TELA DE FIM — melhorada por rota
-# ─────────────────────────────────────────────
 def tela_fim(jogador, resultados, alma_dados):
     limpar()
     linha("═", C.AMARELO)
     print()
 
     if not jogador.esta_vivo():
-        # GAME OVER
         print(C.VERMELHO + C.BOLD + "  GAME OVER" + C.RESET)
         print()
         print(f"  {jogador.nome} foi derrotado no Underground.")
@@ -844,9 +787,6 @@ def tela_fim(jogador, resultados, alma_dados):
     linha("═", C.AMARELO)
 
 
-# ─────────────────────────────────────────────
-#  PROGRAMA PRINCIPAL
-# ─────────────────────────────────────────────
 def main():
     limpar()
     linha()
@@ -863,7 +803,6 @@ def main():
     linha()
     time.sleep(0.4)
 
-    # Nome
     print()
     print(C.AMARELO + "  Nomeie a crianca caida" + C.RESET)
     print()
@@ -872,29 +811,7 @@ def main():
     except EOFError:
         nome = "Frisk"
 
-# Easter egg
-    
-    if nome.strip().lower() == "elza":
-        limpar()
-        linha()
-        time.sleep(0.4)
-        for frase, cor in [
-            ("  * ...", C.CINZA),
-            ("  * Ei...", C.BRANCO),
-            ("  * Esse nome não é qualquer nome.", C.BRANCO),
-            ("  * É um nome que carrega cuidado, força e amor.", C.CINZA),
-            ("  * Um amor daqueles que acolhe, protege e nunca vai embora.", C.CINZA),
-            ("  * Vinicius nao sabe muito bem falar essas coisas.", C.BRANCO),
-            ("  * No jeito que ele fala de você.", C.BRANCO),
-            ("  * Ele te ama muito, Elza. <3", C.VERMELHO + C.BOLD),
-            ("  * Agora vai. Tem um Underground pra atravessar.", C.AMARELO),
-        ]:
-            digitar(frase, cor=cor, delay=0.05)
-            time.sleep(0.5)
-        linha()
-        time.sleep(1.2)
 
-    # Alma
     limpar()
     exibir_almas()
     try:
@@ -908,7 +825,6 @@ def main():
     digitar(f"  * Alma de {alma_dados['cor']}{alma_dados['nome']}{C.RESET} escolhida!", cor=C.BRANCO)
     time.sleep(0.6)
 
-    # Arma
     limpar()
     exibir_armas()
     try:
@@ -923,7 +839,6 @@ def main():
     digitar(f"  * {C.BOLD}{arma.nome}{C.RESET} equipada!", cor=C.BRANCO)
     time.sleep(0.6)
 
-    # Criar personagem
     jogador = Personagem(nome, alma_dados, arma)
     limpar()
     linha()
@@ -933,7 +848,6 @@ def main():
     time.sleep(0.5)
     pausa()
 
-    # Loop de batalhas
     resultados = []
     for cfg in INIMIGOS_CFG:
         if not jogador.esta_vivo():
@@ -956,13 +870,9 @@ def main():
             break
         time.sleep(1)
 
-    # Fim de jogo
     tela_fim(jogador, resultados, alma_dados)
 
 
-# ─────────────────────────────────────────────
-#  PONTO DE ENTRADA
-# ─────────────────────────────────────────────
 if __name__ == "__main__":
     iniciar_musica()
     menu_principal()
