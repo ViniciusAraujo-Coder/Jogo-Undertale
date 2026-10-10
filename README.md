@@ -8,6 +8,7 @@
 
 <img src="https://i.pinimg.com/1200x/8a/8b/37/8a8b3742bc98b2712d373b14fc307193.jpg" width="150">
 
+*Artista: @kuruka_shi in x*
 </div>
 
 ---
@@ -36,54 +37,23 @@ O jogador poderá escolher sua alma, selecionar uma arma e enfrentar inimigos ic
 
 ## 📸 Screenshots
 
-### Escolha da Alma
+| Escolha da Alma | Sistema de Batalha |
+|:---:|:---:|
+| <img src="imagens/alma.jpg" width="400"> | <img src="imagens/batalha.jpg" width="400"> |
 
-<p align="center">
-<img src="imagens/alma.png" width="700">
-</p>
+| Sistema de Itens | Vitória |
+|:---:|:---:|
+| <img src="imagens/inventario.jpg" width="400"> | <img src="imagens/vitoria.jpg" width="400"> |
 
-### Sistema de Batalha
-
-<p align="center">
-<img src="imagens/batalha.png" width="700">
-</p>
-
-### Sistema de Itens
-
-<p align="center">
-<img src="imagens/item.png" width="700">
-</p>
-
-### Vitória
-
-<p align="center">
-<img src="imagens/vitoria.png" width="700">
-</p>
-
----
-
-## ❤️ Escolha sua Alma
-
-🔴 Determinação
-
-🟡 Justiça
-
-🟢 Bondade
-
-🔵 Integridade
-
-🟣 Perseverança
-
----
 
 ## ⚔️ Mecânicas
 
 ```txt
 ╔════════════════════╗
-║ ⚔️ FIGHT           ║
-║ 🧠 ACT             ║
-║ 🎒 ITEM            ║
-║ 🕊️ MERCY           ║
+  ⚔️ FIGHT           
+  🧠 ACT             
+  🎒 ITEM            
+  🕊️ MERCY           
 ╚════════════════════╝
 ```
 
@@ -91,7 +61,6 @@ O jogador poderá escolher sua alma, selecionar uma arma e enfrentar inimigos ic
 
 - ❤️ Escolha de alma
 - ⚔️ Escolha de arma
-- 🎒 Sistema de inventário
 - 🧠 Sistema ACT
 - 🕊️ Sistema MERCY
 - 💀 Batalhas por turno
@@ -103,15 +72,7 @@ O jogador poderá escolher sua alma, selecionar uma arma e enfrentar inimigos ic
 
 ## 👥 Personagens
 
-🌻 Flowey
-
-🐐 Toriel
-
-💀 Papyrus
-
-💀 Sans
-
-👑 Asgore
+🌻 Flowey 🐐 Toriel 💀 Papyrus 💀 Sans 👑 Asgore
 
 ---
 
@@ -144,13 +105,13 @@ O jogador poderá escolher sua alma, selecionar uma arma e enfrentar inimigos ic
 Clone o repositório:
 
 ```bash
-git clone https://github.com/ViniciusAraujo-Coder/NOME-DO-REPOSITORIO.git
+git clone https://github.com/ViniciusAraujo-Coder/Jogo-Undertale.git
 ```
 
 Entre na pasta:
 
 ```bash
-cd NOME-DO-REPOSITORIO
+cd Jogo-Undertale
 ```
 
 Instale as dependências:
